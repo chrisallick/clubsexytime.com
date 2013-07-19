@@ -1,8 +1,10 @@
-changeBackground = function( x, y ) { 
+changeBackground = function( x, y ) {
 	$("#logo .sprite").css({
-		backgroundPositionX: x,
-		backgroundPositionY: y
-	})
+		backgroundPosition: x+"px 0",
+		//backgroundPosition: y
+	}).css({
+		backgroundPosition: "0 "+y+"px",
+	});
 }
 
 var count;
@@ -29,8 +31,7 @@ $(document).ready(function() {
 	});
 
 	count = 0;
-	$(document).mousemove(function(){
-		//console.log("uuuwwaaaaaaaawaaaaa");
+	$("body").mousemove(function(){
 		count++;
 		if( count > 3 ) {
 			changeBackground( getRandomInt(-1,0)*571, getRandomInt(-1,0)*163);	
