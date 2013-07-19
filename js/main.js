@@ -1,14 +1,13 @@
 changeBackground = function( x, y ) {
 	$("#logo .sprite").css({
-		backgroundPosition: x+"px 0",
+		backgroundPosition: x+"px "+y+"px",
 		//backgroundPosition: y
-	}).css({
-		backgroundPosition: "0 "+y+"px",
 	});
 }
 
 var count;
 $(document).ready(function() {
+
 	$("#info").click(function(event){
 		event.preventDefault();
 		if( $(this).hasClass("hidden") ) {
