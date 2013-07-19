@@ -3,9 +3,19 @@ html, body { width: 100%; height: 100%; }
 #info { position: fixed; top: 19px; left: 19px; }
 #info.hidden .x { display: none; }
 #info.show .i { display: none; }
-#expanded-info { position: fixed; top: 19px; left: 56px; display: none; }
-#expanded-info .chrisallick { display: block; position: absolute; left: 0px; bottom: 0px; width: 33px; height: 33px; }
-#expanded-info .pablorochat { display: block; position: absolute; left: 35px; bottom: 0px; width: 33px; height: 33px; }
+
+#email { position: absolute; top: 0px; left: 36px; }
+#experiments { position: absolute; top: 0px; left: 72px; }
+
+#expanded-info { position: fixed; top: 19px; left: 55px; display: none; }
+#expanded-info .chrisallick { display: block; position: absolute; left: 0px; top: 0px; width: 64px; height: 32px; }
+#expanded-info .pablorochat { display: block; position: absolute; left: 69px; top: 0px; width: 68px; height: 32px; }
+
+#header { width: 578px; height: 193px; margin: 0 auto 54px auto; padding-top: 83px; }
+#header #logo { position: relative; width: 578px; height: 193px; }
+#header #logo span { position: absolute; width: 567px; height: 163px; top: 0px; left: 0px; z-index: 1; background: url("../img/bgsprite.png") top left no-repeat; }
+#header #logo span { background-position: 0px 0px; }
+#header #logo .overlay { position: absolute; top: 0px; left: 0px; z-index: 10; }
 
 #wrapper { padding-top: 30px; width: 1000px; margin: 0 auto; }
 #projects { text-align: center; width: 500px; margin: 0 auto; }
