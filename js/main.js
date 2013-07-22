@@ -12,20 +12,10 @@ $(document).ready(function() {
 		event.preventDefault();
 		if( $(this).hasClass("hidden") ) {
 			$(this).removeClass("hidden").addClass("show");
-			
-			$("#email,#experiments").stop().animate({
-				top: 110
-			}, 150, function(){
-				$("#expanded-info").fadeIn(200);
-			});
+			$("#expanded-info").stop().fadeIn(200);
 		} else {
 			$(this).removeClass("show").addClass("hidden");
-
-			$("#expanded-info").stop().fadeOut(200,function(){
-				$("#email,#experiments").stop().animate({
-					top: 0
-				}, 150);	
-			});
+			$("#expanded-info").stop().fadeOut(200);
 		}
 	});
 
