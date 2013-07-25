@@ -22,7 +22,7 @@ changeBackground = function( x, y ) {
 var count, t;
 $(document).ready(function() {
 
-	t = setTimeout(changeLogo, 7000 );
+	//t = setTimeout(changeLogo, 7000 );
 
 	$("#info").click(function(event){
 		event.preventDefault();
