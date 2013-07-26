@@ -14,15 +14,15 @@ changeLogo = function() {
 
 changeBackground = function( x, y ) {
 	$("#logo .sprite").css({
-		backgroundPosition: x+"px "+y+"px",
-		//backgroundPosition: y
+		backgroundPosition: x+"px "+y+"px"
 	});
 }
 
-var count, t;
+var count;
+var logos = ["logo.gif","girl.gif","chris.gif"];
 $(document).ready(function() {
 
-	//t = setTimeout(changeLogo, 7000 );
+	$("#header .logo").attr("src","./img/logos/"+logos[getRandomInt(0,logos.length-1)]);
 
 	$("#info").click(function(event){
 		event.preventDefault();
