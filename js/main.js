@@ -1,13 +1,7 @@
 changeLogo = function() {
 	clearTimeout( t );
 
-	var $next = $('.logo.on').removeClass('on').next('.logo');
-	if ($next.length) {
-	    $next.addClass('on'); 
-	}
-	else {
-	    $(".logo:first").addClass('on');
-	}
+	$("#header").html( logos.getLogo() );
 
 	t = setTimeout(changeLogo, 7000 );
 }
@@ -18,11 +12,23 @@ changeBackground = function( x, y ) {
 	});
 }
 
+$(window).load(function(){
+	logos = new Logos("./img/logos/",logo_images,function(){
+		$("#header").html( logos.getLogo(firstLogo) );
+
+		t = setTimeout( changeLogo, 7000 );
+	});
+});
+
 var count;
-var logos = ["logo.gif","girl.gif","chris.gif"];
+var logo_images = ["logo","girl","chris"];
+var logos;
+var firstLogo;
+var t;
 $(document).ready(function() {
 
-	$("#header .logo").attr("src","./img/logos/"+logos[getRandomInt(0,logos.length-1)]);
+	firstLogo = getRandomInt(0,logo_images.length-1);
+	$("#header .logo").attr("src","./img/logos/"+self.logo_images[firstLogo]+".png");
 
 	$("#info").click(function(event){
 		event.preventDefault();
