@@ -21,7 +21,7 @@ $(window).load(function(){
 });
 
 var count;
-var logo_images = ["logo","girl","chris"];
+var logo_images = ["logo","girl","chris", "flag"];
 var logos;
 var firstLogo;
 var t;
