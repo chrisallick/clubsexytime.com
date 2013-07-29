@@ -13,9 +13,11 @@ changeBackground = function( x, y ) {
 }
 
 $(window).load(function(){
-	logos = new Logos("./img/logos/",logo_images,function(){
+	logos = new Logos("./img/logos/", logo_images, firstLogo, function(){
+		//console.log("cool!");
 		$("#header").html( logos.getLogo(firstLogo) );
-
+	}, function() {
+		//console.log("great!");
 		t = setTimeout( changeLogo, 7000 );
 	});
 });
